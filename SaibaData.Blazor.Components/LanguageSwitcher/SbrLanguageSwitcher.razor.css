@@ -1,0 +1,18 @@
+﻿.language-btn {
+    width: calc(28/16 * 1rem);
+    height: calc(28/16 * 1rem);
+    font-size: .76563rem;
+    line-height: 1.5;
+    padding: 0;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: var(--palette-brand-primary);
+    border-color: var(--palette-brand-primary);
+}
+
+.btn-outline-primary, .btn-outline-primary:hover, .btn-outline-primary:active {
+    color: var(--palette-brand-primary);
+    border-color: var(--palette-brand-primary);
+    background-color: var(--palette-white-primary);
+}

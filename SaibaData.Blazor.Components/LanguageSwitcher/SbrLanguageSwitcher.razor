@@ -1,0 +1,61 @@
+﻿@inject IJSRuntime Js
+@inject SbrEnvironmentState EnvironmentState
+
+<div>
+    <div class="btn-group  nav-link m-2" role="group" aria-label="Select language">
+
+        @foreach (var culture in supportedCultures)
+        {
+            var buttonClass = culture.Name == CultureInfo.CurrentCulture.Name ? "btn-primary" : "btn-outline-primary";
+            <button @onclick='(() => SetCulture(culture))' class="btn rounded-circle language-btn me-2 @buttonClass">@culture.Name.Substring(0, 2).ToUpperInvariant()</button>
+        }
+    </div>
+</div>
+
+@code {
+    private IJSObjectReference? module;
+    private CultureInfo[] supportedCultures = new[]
+        {
+        new CultureInfo("en-GB"),
+        new CultureInfo("fr"),
+    };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        string cultureToken = "en-GB";
+        if (firstRender)
+        {
+            module = await Js.InvokeAsync<IJSObjectReference>("import", "./_content/SaibaData.Blazor.Components/LanguageSwitcher/SbrLanguageSwitcher.razor.js");
+            var result = await module.InvokeAsync<string>("getLanguageCulture");
+
+            if (result != null)
+            {
+                cultureToken = result;
+                var culture = new CultureInfo(result);
+                CultureInfo.DefaultThreadCurrentCulture = culture;
+                CultureInfo.DefaultThreadCurrentUICulture = culture;
+            }
+            else
+            {
+                await module.InvokeVoidAsync("setLanguageCulture", cultureToken);
+            }
+            StateHasChanged(); //do we need this here?
+            EnvironmentState.OnLanguageSwitched();
+        }
+
+         await base.OnAfterRenderAsync(firstRender);
+    }
+
+    
+
+    protected async Task SetCulture(CultureInfo ci)
+    {
+        CultureInfo.DefaultThreadCurrentCulture = ci;
+        CultureInfo.DefaultThreadCurrentUICulture = ci;
+        if (module is not null)
+        {
+            await module.InvokeVoidAsync("setLanguageCulture", ci.Name);
+            EnvironmentState.OnLanguageSwitched();
+        }
+    }
+}

@@ -1,0 +1,63 @@
+﻿.sbr-card {
+    position: relative;
+    box-shadow: 0 calc(4/16 * 1rem) calc(8/16 * 1rem) rgba(0, 0, 0, 0.2), 0 calc(6/16 * 1rem) calc(20/16 * 1rem) 0 rgba(0, 0, 0, 0.19);
+    background-color: transparent;
+}
+
+.header-base {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.header {
+    border-bottom-color: var(--palette-info-background, brown);
+    background-color: var(--palette-info-background, brown);
+}
+
+.header-blank {
+    border-bottom-color: var(--palette-info-background, brown);
+}
+
+.card-body {
+    padding: 1rem;
+    background-color: white;
+}
+
+.footer {
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    height: 5rem;
+    background-color: var(--palette-info-background, brown);
+}
+
+.nofooter {
+    padding: unset;
+    padding-bottom: 1rem;
+    height: unset;
+}
+
+.round-base {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.round-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.action-right {
+    position: absolute;
+    right: 0;
+    padding-right: 2em;
+    margin-top: -2.5rem;
+}
+
+    .action-right:hover {
+        cursor: pointer;
+    }
