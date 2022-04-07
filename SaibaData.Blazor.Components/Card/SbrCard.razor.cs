@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SaibaData.Blazor.Components.Card;
+namespace SaibaData.Blazor.Components;
 
 public partial class SbrCard
 {
