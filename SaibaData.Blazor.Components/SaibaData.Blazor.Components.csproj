@@ -17,6 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Css\**\*.*" />
+    <EmbeddedResource Include="Svgs\**\*.*" />
+  </ItemGroup>	
+
+  <ItemGroup>
     <Folder Include="Layout\" />
     <Folder Include="Spinner\" />
   </ItemGroup>

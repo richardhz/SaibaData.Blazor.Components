@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,6 @@ public  class AssemblyResourceLocator
     public AssemblyResourceLocator(params ResourceConfiguration[] configurations)
     {
         resources = new(StringComparer.OrdinalIgnoreCase);
-
         foreach (var configuration in configurations)
         {
             var assembly = configuration.Type.Assembly;
@@ -44,7 +44,6 @@ public  class AssemblyResourceLocator
 
             //Resx resources show up with a .resources extension. We don't want them.
             var resourceNames = assembly.GetManifestResourceNames().Where(name => !name.EndsWith(".resources", StringComparison.OrdinalIgnoreCase));
-
 
             resourceNames.ToList().ForEach(name =>
             {

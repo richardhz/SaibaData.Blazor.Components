@@ -1,0 +1,22 @@
+﻿:root {
+    --palette-brand-primary: #255070;
+    --palette-brand-secondary: #1c5280;
+    --palette-alt-dark: #005A84;
+    --palette-white-primary: white;
+    --palette-info-border: #E4F1F8;
+    --palette-info-background: #F6FAFC;
+    --palette-info-foreground: #005A84;
+    --palette-success-border: #95DFD1;
+    --palette-success-background: #ADE7DC;
+    --palette-success-foreground: #408435;
+    --palette-warning-border: #F1DEC2;
+    --palette-warning-background: #FCEFD7;
+    --palette-warning-foreground: #F3AB2A;
+    --palette-error-border: #EEBCC8;
+    --palette-error-background: #FFDDE5;
+    --palette-error-foreground: #E41748;
+    --palette-grey-1: #F5F5F5;
+    --palette-dropdown-border-idle: #F5F5F5;
+    --palette-primary-dark: #372525;
+    
+}

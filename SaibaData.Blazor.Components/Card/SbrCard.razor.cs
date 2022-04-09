@@ -15,6 +15,9 @@ public partial class SbrCard
 
     [Parameter] public bool Collapsible { get; set; } = false;
 
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object> AnyAdditionalAttributes { get; set; }
+
     [Parameter] public string? CssClass { get; set; }
 
     [Parameter] public bool HasBottomStyle { get; set; } = true;

@@ -1,18 +1,19 @@
 ﻿@namespace SaibaData.Blazor.Components
-<div class="sncl-card round-top @RoundBaseCssClass @CssClass">
+<div @attributes="AnyAdditionalAttributes">
+<div class="sbr-card round-top @RoundBaseCssClass @CssClass">
     <div class="@HeaderCssClass">
         <span>@Header</span> 
         @if (@Collapsible) {
             @if (@Collapsed)
             {
                 <div class="action-right" @onclick="OnShowHideClick"   aria-hidden="true">
-                   <SbrSvg ResourceName="library/svgs/DownArrow.svg"></SbrSvg>
+                   <SbrSvg ResourceName="library/Svgs/DownArrow.svg"></SbrSvg>
                 </div>
             }
             else
             {
                 <div class="action-right"  @onclick="OnShowHideClick" aria-hidden="true">
-                   <SbrSvg ResourceName="library/svgs/UpArrow.svg"></SbrSvg>
+                   <SbrSvg ResourceName="library/Svgs/UpArrow.svg"></SbrSvg>
                 </div>
             }
         }
@@ -26,4 +27,5 @@
             @Actions
         </div>
     }
+</div>
 </div>

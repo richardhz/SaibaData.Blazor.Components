@@ -1,0 +1,8 @@
+﻿/*todo: probably don't need all.css just for a spinner
+    also we're dropping font-awesome
+*/
+
+
+
+@import 'lib/bootstrap/dist/css/bootstrap.css';
+@import 'palette.css';
