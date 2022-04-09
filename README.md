@@ -9,7 +9,9 @@ So far I have created;
 - Svg Component to display svgs
 - Collection extension methods to configure library
 - AssemblyResourceLocator to locate resources such as Svgs distributed with the library
+- Added Bootstrap and Font Awesome
+- Added a basic pallette, this will allow colour changes in different projects
 
 Todo;
 
-- Default theme 
+- Add a few more components.
