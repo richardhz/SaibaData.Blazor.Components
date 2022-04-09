@@ -6,9 +6,10 @@ So far I have created;
 
 - LanguageSwitcher which will store the currently selected language in local storage using jsInterop
 - Collapsable Card 
+- Svg Component to display svgs
+- Collection extension methods to configure library
+- AssemblyResourceLocator to locate resources such as Svgs distributed with the library
 
 Todo;
 
-- Svg Component to display svgs' 
-- Collection extension methods to configure library
 - Default theme 
