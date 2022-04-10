@@ -1,0 +1,22 @@
+﻿@namespace SaibaData.Blazor.Components
+@typeparam TItem
+
+@foreach(TItem item in Items ?? Array.Empty<TItem>())
+{
+    <div class="card card-body bg-light">
+        <div class="card-body">
+            @ChildContent!(item)
+        </div>
+    </div>
+}
+
+@code {
+   
+
+    [Parameter]
+    public RenderFragment<TItem>? ChildContent { get; set; }
+
+    [Parameter]
+    public IEnumerable<TItem>? Items { get; set; }
+    
+}
