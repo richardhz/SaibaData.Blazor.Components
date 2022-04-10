@@ -11,7 +11,7 @@ So far I have created;
 - AssemblyResourceLocator to locate resources such as Svgs distributed with the library
 - Added Bootstrap and Font Awesome
 - Added a basic pallette, this will allow colour changes in different projects
-- Added a basic collection Component called DisplayInfoList
+- Added a basic collection Component called SbrDisplayInfoList
 
 Todo;
 
