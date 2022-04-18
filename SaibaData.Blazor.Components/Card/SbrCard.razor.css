@@ -22,7 +22,7 @@
 
 .card-body {
     padding: 1rem;
-    background-color: white;
+    background-color: var(--palette-brand-background);
 }
 
 .footer {
